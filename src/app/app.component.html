@@ -1,8 +1,22 @@
 <h1>Propiedades</h1>
 <input type="text" [value]="person.name">
 <button [disabled]="btnDisabled">Enviar</button>
+<!-- Para manejar eventos -->
+<button (click)="toggleButton()">Toggle Button</button>
+<p>Edad : {{person.age}}</p>
+<button (click)="increaseAge()">Age++</button>
+
 <progress max="100" [value]="person.age"></progress>
 <img [src]="person.avatar" alt="" width="100">
+
+<section id="otros_eventos" >
+	<div class="box" (scroll)="onScroll($event)">
+		<p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Nisi, eius officia, iste autem sed ducimus dolorum exercitationem labore? Fugiat quod voluptates sint iure placeat quo nobis molestiae ullam facere iusto.Lor
+		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni libero a blanditiis dolores velit eum inventore dolore nobis excepturi atque magnam fugit molestiae quibusdam recusandae, ea molestias reprehenderit, cupiditate rerum.</p>
+	</div>
+	<p>Nombre: {{person.name}}</p>
+	<input type="text" [value]="person.name" (keyup)="changeName($event)">
+</section>
 
 <h1>Hola Mundo</h1>
 <h2>{{ 'Hola mundo'.repeat(5) }}</h2>
