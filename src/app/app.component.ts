@@ -13,7 +13,7 @@ export class AppComponent {
   //Trabajando con un objketo para su render en el view
   person = {
     name:"Gianni",
-    age:35,
+    age:18,
     avatar:this.img,
   }
 

@@ -1,5 +1,33 @@
+<!-- ngIf -->
+<section id="ngIf">
+	<h1>NgIf</h1>
+	<input type="text" [(ngModel)]="person.name">
+	<p *ngIf="person.name=== 'gianni'">Soy Gianni</p>
+	<p *ngIf="person.name=== 'dario' && person.age==18; else elseBlock">Soy Dario</p>
+	<ng-template #elseBlock>
+		<p>Bloque de else</p>
+	</ng-template>
+</section>
+<!-- -->
+
+<!--NgModel-->
+<section id="NgModel">
+	<p>Nombre:{{person.name}}</p>
+	<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name">
+	<!--sabemos si es valido -->
+	<p>Valid Nombre: {{nameInput.valid}}</p>
+	<p>Edad:{{person.age}}</p>
+	<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age">
+	<p>Valid Edad: {{ageInput.valid}}</p>
+</section>
+
+<!-- ->
+
+<!-- propiedades-->
 <h1>Propiedades</h1>
 <input type="text" [value]="person.name">
+<!-- -->
+<br>
 <button [disabled]="btnDisabled">Enviar</button>
 <!-- Para manejar eventos -->
 <button (click)="toggleButton()">Toggle Button</button>
