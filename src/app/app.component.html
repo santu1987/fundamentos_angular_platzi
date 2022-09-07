@@ -1,3 +1,50 @@
+<!-- ngswicht -->
+<section id="ngSwitch">
+	<h1> ngSwitch</h1>
+	<input type="text" rquired [(ngModel)]="person.name">
+	<div [ngSwitch]="person.name">
+		<p *ngSwitchCase="'Licett'">
+			Esta persona es Licett
+		</p>
+
+		<p *ngSwitchCase="'Alan'">
+			Esta persona es Alan
+		</p>
+
+		<p *ngSwitchCase="'Gianni'">
+			Esta persona es Gianni
+		</p>
+		<p *ngSwitchDefault> No hace match</p>
+	</div>
+
+</section>
+<!-- -->
+
+<!-- ngFor para arrays de objetos -->
+<section id="ngForObjects">
+	<h1> *ngFor Objects</h1>
+	<div>
+		<div *ngFor="let product of products">
+			<img with="250" [src]="product.image" alt="image">
+			<h2>{{ product.price}}</h2>
+			<p>{{ product.name}}</p>
+		</div>
+	</div>
+</section>
+<!-- -->
+<!-- ngFor -->
+<h1>*ngFor</h1>
+<input type="text" required [(ngModel)]="newName">
+<button (click)="addName()"> Add Name</button>
+<ul>
+	<li *ngIf="names.length==0">No hay elementos</li>
+	<li *ngFor="let name of names; index as i">
+		{{i}} ) {{name}}
+		<button (click)="deleteName(i)">Delete</button>
+	</li>
+</ul>
+<!-- -->
+
 <!-- ngIf -->
 <section id="ngIf">
 	<h1>NgIf</h1>
